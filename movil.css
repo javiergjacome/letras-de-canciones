@@ -1,19 +1,27 @@
 /* Este archivo SOLO se aplica si la pantalla tiene ancho <= 600px */
 
 body {
-    font-size: 1.1rem;
+    font-size: 17px;
 }
 
 header {
-    padding: 5px;
+    padding: 10px;
     font-size: 1rem;
+}
+
+/* Contenedor principal más pegado y sin saltos raros */
+main {
+  margin: 8px auto;
+  padding: 12px;
 }
 
 .verso {
     padding: 14px;
-    font-size: 1.15rem;
+    font-size: 18px;
 }
 
 .popup-contenido {
-    width: 90%;
+  width: 92vw;
+  max-width: none;
+  max-height: 80vh;
 }

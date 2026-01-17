@@ -1,9 +1,23 @@
 
+/* Sistema de caja más predecible */
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+/* Evitar scroll horizontal accidental */
+html, body { width: 100%; overflow-x: hidden; }
+
+/* Mejor ruptura de palabras en versos y títulos largos */
+body { word-wrap: break-word; overflow-wrap: anywhere; } /* anywhere es seguro en móviles */
+
+
 body {
     font-family: "Segoe UI", Roboto, sans-serif;
     background: #f2f5f9;
     margin: 0;
     color: #333;
+    font-size: clamp(16px, 1rem + 0.2vw, 18px); /* base fluida */
+    line-height: 1.5;
 }
 
 header {
@@ -19,9 +33,8 @@ h1 {
 
 main {
     max-width: 700px;
-    margin: 30px auto;
-	margin-top: 10px auto;
-    padding: 20px;
+	margin: 16px auto;
+    padding: 16px;
 }
 
 .cancion-lista-item {
@@ -40,13 +53,14 @@ main {
 }
 
 .verso {
-    padding: 8px 12px;
-    margin: 4px 0;
+    padding: 10px 14px; /* algo más generoso para táctil */
+    margin: 6px 0;
     border-left: 4px solid #87cefa;
     background: white;
-    border-radius: 4px;
+    border-radius: 6px;
     cursor: pointer;
     transition: background 0.2s;
+    font-size: clamp(16px, 1rem + 0.4vw, 19px); /* sube un poco los versos */
 }
 
 .verso:hover {
@@ -56,10 +70,8 @@ main {
 /***** POPUP *****/
 .popup {
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    inset: 0;                /* equivale a top/right/bottom/left:0 */
+    padding: 12px;
     background: rgba(0,0,0,0.45);
     display: flex;
     align-items: center;
@@ -72,10 +84,11 @@ main {
 
 .popup-contenido {
     background: white;
-    padding: 20px;
-    border-radius: 8px;
-    width: 80%;
-    max-width: 400px;
+    padding: 16px;
+    border-radius: 10px;
+    width: min(90vw, 420px); /* 90% del viewport o 420px como máximo */
+    max-height: 80vh;        /* no más alta que el 80% de la pantalla */
+    overflow: auto;          /* si el texto es largo, que haga scroll dentro */
     position: relative;
     box-shadow: 0 4px 20px rgba(0,0,0,0.25);
 }

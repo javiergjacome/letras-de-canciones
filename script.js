@@ -157,5 +157,12 @@ document.getElementById("popup-cerrar").onclick = () => {
     document.getElementById("popup").classList.add("oculto");
 };
 
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    document.getElementById("popup").classList.add("oculto");
+  }
+});
+
+
 // Inicializar
 mostrarLista();
