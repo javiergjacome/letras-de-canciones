@@ -1,0 +1,19 @@
+/* Este archivo SOLO se aplica si la pantalla tiene ancho <= 600px */
+
+body {
+    font-size: 1.1rem;
+}
+
+header {
+    padding: 5px;
+    font-size: 1rem;
+}
+
+.verso {
+    padding: 14px;
+    font-size: 1.15rem;
+}
+
+.popup-contenido {
+    width: 90%;
+}

@@ -1,0 +1,98 @@
+
+body {
+    font-family: "Segoe UI", Roboto, sans-serif;
+    background: #f2f5f9;
+    margin: 0;
+    color: #333;
+}
+
+header {
+    background: linear-gradient(135deg, #87cefa, #4682b4);
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+h1 {
+    margin: 0;
+}
+
+main {
+    max-width: 700px;
+    margin: 30px auto;
+	margin-top: 10px auto;
+    padding: 20px;
+}
+
+.cancion-lista-item {
+    background: white;
+    padding: 15px 20px;
+    margin: 10px 0;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    transition: transform 0.1s, box-shadow 0.2s;
+}
+
+.cancion-lista-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.verso {
+    padding: 8px 12px;
+    margin: 4px 0;
+    border-left: 4px solid #87cefa;
+    background: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.verso:hover {
+    background: #eef7ff;
+}
+
+/***** POPUP *****/
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup.oculto {
+    display: none;
+}
+
+.popup-contenido {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 400px;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+}
+
+#popup-cerrar {
+    position: absolute;
+    right: 12px;
+    top: 8px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #666;
+}
+
+.volver-lista {
+    display: inline-block;
+    margin: 20px 0;
+    text-decoration: none;
+    color: #4682b4;
+    font-weight: bold;
+}
