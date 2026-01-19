@@ -1,3 +1,4 @@
+ErbarmeDich.ini
 daUntenImTale.ini
 SeitIchIhnGesehen.ini
 ErDerHerrlichsteVonAllen.ini
